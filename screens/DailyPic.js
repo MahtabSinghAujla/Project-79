@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, Image, ImageBackground, TouchableOpacity, StyleSheet, Alert, Platform, StatusBar, SafeAreaView, Linking, ScrollView } from 'react-native';
 
-// import axios from 'axios';
-// import {axios} from 'axios';
-// import axios from axios;
-// import "axios" from axios;
+import axios from 'axios';
 
 export default class DailyPicScreen extends Component {
     constructor(props) {
@@ -20,7 +17,7 @@ export default class DailyPicScreen extends Component {
 
     getAPOD = () => {
         axios
-            .get("https://api.nasa.gov/planetary/apod?api_key=COGdtQeIWk1mbziFVQgpfK3JfP4dBSAlQg8imDGw")
+            .get("https://api.nasa.gov/planetary/apod?api_key=AkxnJcDcBQ5aX9WSrtgRjJxYUBvu1QZahARZpByZ")
             .then(response => {
                 this.setState({ apod: response.data })
             })
@@ -31,26 +28,11 @@ export default class DailyPicScreen extends Component {
 
     renderImage = (url) => {
 
-        // <Image source={{ "uri": url }} 
-        // style={{ width: "100%", height: 300, 
-        //borderRadius: 20, margin: 3 }}>
-        // </Image>
-
-        // <Image source={ "uri": url }
-        // style={{ width: "100%", height: 300, 
-        //borderRadius: 20, margin: 3 }}>
-        // </Image>
-        
-        // <Image source={{ "uri"= url }} 
-        // style={{ width: "100%", height: 300, 
-        //borderRadius: 20, margin: 3 }}>
-        // </Image>
-        
-        // <Image require={{ "uri": url }} 
-        // style={{ width: "100%", height: 300, 
-        //borderRadius: 20, margin: 3 }}>
-        // </Image>
-        
+       <Image source={{ "uri": url }} 
+         style={{ width: "100%", height: 300, 
+        borderRadius: 20, margin: 3 }}>
+         </Image>
+         
     }
 
     renderVideo = () => {
